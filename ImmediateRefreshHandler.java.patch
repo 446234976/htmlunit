@@ -1,0 +1,11 @@
+--- /tmp/htmlunit-src/src/main/java/com/gargoylesoftware/htmlunit/ImmediateRefreshHandler.java	2013-06-05 01:42:14.000000000 +0430
++++ 01/main/java/com/gargoylesoftware/htmlunit/ImmediateRefreshHandler.java	2013-08-01 12:43:59.000000000 +0430
+@@ -53,7 +53,7 @@
+                 + "Attempted to refresh a page using an ImmediateRefreshHandler "
+                 + "which could have caused an OutOfMemoryError "
+                 + "Please use WaitingRefreshHandler or ThreadedRefreshHandler instead.";
+-            throw new RuntimeException(msg);
++            throw new IOException(msg);
+         }
+         client.getPage(window, new WebRequest(url));
+     }
